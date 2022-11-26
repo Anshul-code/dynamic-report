@@ -1,0 +1,13 @@
+/vendor
+/tests/log
+phpunit.xml
+*.jasper
+*.cache
+
+# IDE
+## Eclipse
+.buildpath
+.project
+.settings
+## PHPStorm
+.idea/

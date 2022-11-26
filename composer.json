@@ -1,0 +1,24 @@
+{
+    "name": "anshul-netgen/jasper-report",
+    "description": "Dynamically create Reports using jrxml file and Laravel.",
+    "type": "library",
+    "require": {
+        "geekcom/phpjasper": "dev-master"
+    },
+    "require-dev": {
+        "geekcom/phpjasper": "dev-master"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AnshulNetgen\\JasperReport\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anshul-code",
+            "email": "anshulkumar2027@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
