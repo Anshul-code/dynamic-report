@@ -15,6 +15,12 @@ composer require anshul-netgen/jasper-report
 AnshulNetgen\JasperReport\JasperReportServiceProvider::class
 ```
 
+##### Publish config
+
+```
+php artisan vendor:publish
+```
+
 ##### Add symblink to storage
 
 ```
