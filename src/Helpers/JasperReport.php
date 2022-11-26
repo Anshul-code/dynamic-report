@@ -29,7 +29,7 @@ class JasperReport{
 
         self::createJsonFile($json, $tempJsonFile);
 
-        self::process($format, $tempJsonFile);
+        return self::process($format, $tempJsonFile);
     }
 
     /**
@@ -92,7 +92,7 @@ class JasperReport{
         $nome = 'jasper_report';
         $filename =  $nome  . time();
         $input   = public_path(config('jasperreport.jasper_file_path'));
-        $output  = public_path('reports'. $filename);
+        $output  = public_path('reports/'. $filename);
     
         $dataFile =  public_path('/storage/' . $tempJsonFile);
 

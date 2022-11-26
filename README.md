@@ -15,6 +15,12 @@ composer require anshul-netgen/jasper-report
 AnshulNetgen\JasperReport\JasperReportServiceProvider::class
 ```
 
+##### Add symblink to storage
+
+```
+php artisan storage:link
+```
+
 ##### Usage
 
 ###### Using Api:
@@ -23,7 +29,7 @@ AnshulNetgen\JasperReport\JasperReportServiceProvider::class
 
 use AnshulNetgen\JasperReport\Helpers\JasperReport;
 
-JasperReport::make('pdf', 'http://localhost:8001/api/users');
+return JasperReport::make('pdf', 'http://localhost:8001/api/users');
 ```
 
 ###### Using JSON:
@@ -32,7 +38,7 @@ JasperReport::make('pdf', 'http://localhost:8001/api/users');
 
 use AnshulNetgen\JasperReport\Helpers\JasperReport;
 
-JasperReport::makeFromJson('pdf', $json);
+return JasperReport::makeFromJson('pdf', $json);
 ```
 
 [This Library is using https://github.com/PHPJasper/phpjasper]([https://](https://github.com/PHPJasper/phpjasper))
