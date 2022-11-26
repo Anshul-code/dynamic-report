@@ -4,10 +4,16 @@
 
 ##### Installation
 To install dynamic jasper reports:
-`composer require anshul-netgen/jasper-report`
+
+```
+composer require anshul-netgen/jasper-report
+````
 
 ##### Add Service Provider in app.php
-`AnshulNetgen\JasperReport\JasperReportServiceProvider::class`
+
+```
+AnshulNetgen\JasperReport\JasperReportServiceProvider::class
+```
 
 ##### Usage
 
