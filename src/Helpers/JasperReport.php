@@ -54,9 +54,9 @@ class JasperReport{
      * @param string $tempJsonFile
      * @return void
      */
-    public function createJsonFile($json, $tempJsonFile)
+    public static function createJsonFile($json, $tempJsonFile)
     {
-        $this->deleteJsonFile($tempJsonFile);
+        self::deleteJsonFile($tempJsonFile);
         
         Storage::disk('public')->put($tempJsonFile, $json);
     }
@@ -67,7 +67,7 @@ class JasperReport{
      * @param string $tempJsonFile
      * @return void
      */
-    public function deleteJsonFile($tempJsonFile)
+    public static function deleteJsonFile($tempJsonFile)
     {
         if(Storage::exists('public/' . $tempJsonFile)){
             Storage::delete('public/' . $tempJsonFile);
@@ -81,7 +81,7 @@ class JasperReport{
      * @param string $tempJsonFile
      * @return mixed
      */
-    public function process($format, $tempJsonFile) 
+    public static function process($format, $tempJsonFile) 
     {
         $input = public_path(config('jasperreport.jrxml_file_path'));
     
@@ -136,7 +136,7 @@ class JasperReport{
           return response()->file($file)->deleteFileAfterSend();
         }
         
-        $this->deleteJsonFile($tempJsonFile);
+        self::deleteJsonFile($tempJsonFile);
     }
 
 
